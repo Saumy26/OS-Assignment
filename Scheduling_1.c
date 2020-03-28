@@ -24,7 +24,7 @@ void rr_schedule()
 	} 
 	printf("\nP_ID\tBurst time\t Turnaround time\t Waiting time\n");
 	x=j;
-    for(i=0; total=0; x!=0) 
+    for(i=0, total=0; x!=0;) 
     { 
     	if(temp[i]<=4 && temp[i]>0) 
         {
