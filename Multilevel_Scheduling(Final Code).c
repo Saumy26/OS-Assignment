@@ -17,7 +17,7 @@ float avg_waiting2,avg_turnaround2;
 
 void rr_schedule()
 {
-	printf("Time Quantun : 4\n");
+	printf("Time Quantum : 4\n");
 	for(i=0;i<j;i++)
 	{
 		temp[i]=bt_1[i];
@@ -217,7 +217,7 @@ void rr1_schedule()
 
 int main()
 {
-	printf("Enter the nunber of process :: \n");
+	printf("Enter the number of process :: \n");
 	scanf("%d",&n);
 	for(i=0;i<n;i++)
 	{ 
@@ -264,8 +264,8 @@ int main()
 
 	rr_schedule();
 	fcfs_schedule();
-  priority_schedule();
-  rr1_schedule();
+        priority_schedule();
+        rr1_schedule();
 	
 	return 0;
 }
