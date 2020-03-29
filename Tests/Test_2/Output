@@ -1,40 +1,13 @@
-Enter the nunber of process :: 
+Enter the number of process :: 3
 Enter the details of p[1]
-Arrival time:Burst time:priority_schedule(1 to 10):Enter the details of p[2]
-Arrival time:Burst time:priority_schedule(1 to 10):Enter the details of p[3]
-Arrival time:Burst time:priority_schedule(1 to 10):
-
-P[1] belongs to Q1
-
-
-P[2] belongs to Q1
-P[3] belongs to Q2
-Time Quantum : 4
-
-P_ID	Burst time	 Turnaround time	 Waiting time
-
-P[1] of Q1 is running for 4 units
-P[2] of Q1 is running for 4 units
-P[1] of Q1 is running for 4 units
-P[2] of Q1 is running for 4 units
-P[2]		8		12		4
-P[1] of Q1 is running for 2 units
-P[1]		10		18		8
-Average Waiting Time  :: 6.000000
-Average Turnaround Time  :: 15.000000
-
-Process		Burst time	Waiting time	Turnaround time
-
-Average Waiting time  :: -nan
-Average Turnaround time  :: -nan
-P_ID		Burst time	 Waiting time	 Turnaround time
-
-P[1]			2			 0			 2
-
-Average Waiting time  :: 	0.000000
-Average Turnaround time  :: 	2.000000
-
-P[1] of Q2 is running for 2 unitsTime Quantum between the queues is : 10
-Q1 is running for 10 units
-Q2 is running for 2 units
-Q1 is running for 8 units
+Arrival time: 0
+Burst time: 4
+priority_schedule(1 to 10): 4
+Enter the details of p[2]
+Arrival time: 2
+Burst time: 8
+priority_schedule(1 to 10): 2
+Enter the details of p[3]
+Arrival time: 1
+Burst time: -4
+		Burst Time can't be a negative value
