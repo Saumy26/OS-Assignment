@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 int at_1[20],at_2[20],p2[20],p2[20],at_3[20];
 int bt_1[20],bt_2[20],bt_3[20];
 
@@ -111,22 +112,32 @@ void fcfs_schedule()
 
 int main()
 {
-	printf("Enter the nunber of process :: \n");
+	printf("Enter the number of process :: \n");
 	scanf("%d",&n);
 	for(i=0;i<n;i++)
 	{ 
 		printf("Enter the details of p[%d]\n",i+1);
 		printf("Arrival time:");
 		scanf("%d",&at[i]);
+		if(at[i]<0)
+		{
+			printf("\n\t\tArrival Time can't be a negative value");
+			exit(0);
+		}
 		printf("Burst time:");
 		scanf("%d",&bt[i]);
+		if(bt[i]<0)
+		{
+			printf("\n\t\tBurst Time can't be a negative value");
+			exit(0);
+		}
 		printf("priority_schedule(1 to 10):");
 		scanf("%d",&pr[i]);
 		total=total+bt[i];
 	}
 	for(i=0;i<n;i++)
 	{
-		if(pr[i]>=1&&pr[i]<=5)
+		if(pr[i]>=1&&pr[i]<=3)
 		{
 			printf("\n\nP[%d] belongs to Q1\n",i+1);
 			at_1[j]=at[i];
@@ -135,7 +146,7 @@ int main()
 			t1=t1+bt[i];
 		}
 		
-		else if(pr[i]>=6&&pr[i]<=10)
+		else if(pr[i]>=4&&pr[i]<=6)
 		{
 			printf("P[%d] belongs to Q2\n",i+1);
 			at_2[y]=at[i];
@@ -146,7 +157,7 @@ int main()
 			t2=t2+bt[i];
 		}
 		
-		else if(pr[i]>=11&&pr[i]<=10)
+		else if(pr[i]>=7&&pr[i]<=10)
 		{
 			printf("P[%d] belongs to Q3\n\n",i+1);
 			at_3[z]=at[i];
@@ -156,8 +167,10 @@ int main()
 		}
 	}
 
-	rr_schedule();
-	fcfs_schedule();
+    rr_schedule();
+    fcfs_schedule();
+    priority_schedule();
+    rr1_schedule();
 	
-	return 0;
+    return 0;
 }
